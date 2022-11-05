@@ -1,0 +1,70 @@
+/* ABOUT US */
+
+.home {
+  background-image: url(../images/about-us.jpg);
+  padding-top: 20px;
+  transform: translateX();
+  background-position: center;
+  height: 90vh;
+  background-size: 100% 100%;
+}
+
+.about-page-title {
+  padding-top: 10px;
+  text-align: center;
+  position: relative;
+  color: $color-font-one;
+  letter-spacing: 10px;
+  font-family: $font-family;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.about-page-title::after {
+  position: absolute;
+  content: '';
+  top: 115px;
+  width: 600px;
+  height: 5px;
+  transform: translateX(-50%);
+  background: $color-font-one;
+}
+
+.about-description p {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: $font-family;
+  font-style: italic;
+  color: $color-font-two;
+  padding-top: 40px;
+  padding-left: 20%;
+  padding-right: 30%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-description h3 {
+  font-family: $font-family;
+  text-align: right;
+  padding-right: 20%;
+  margin: 0 auto;
+  color: $color-font-two;
+  font-style: italic;
+  font-family: $font-family;
+  font-size: 30px;
+  font-weight: 600;
+
+}
+
+// FOOTER //
+
+.footer {
+  font-family: $font-family;
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+  color: $color-font-three;
+  font-size: 15px;
+  font-weight: 600;
+}

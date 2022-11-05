@@ -1,0 +1,48 @@
+.header::before {
+  position: absolute;
+  content: '';
+  bottom: 0%;
+  width: 200%;
+  opacity: 60%;
+  height: 100vh;
+  transform: translateX(-50%);
+  background: $color-font-three;
+  z-index: 1;
+}
+
+.header {
+  background-image: url(../images/background.png);
+  background-size: 100% 100%;
+  background-position: center;
+  height: 100vh;
+  max-width: 100%;
+  position: relative;
+  font-family: $font-family;
+  z-index: 2;
+
+  .header-discover {
+    color: $color-font-two;
+    text-align: center;
+    letter-spacing: 5px;
+    font-family: $font-family;
+    z-index: 2;
+    position: relative;
+    padding-top: 380px;
+
+    .icon-arrow {
+      font-size: 35px;
+      z-index: 2;
+    }
+  }
+}
+
+.header-title::after {
+  position: absolute;
+  content: '';
+  bottom: -65px;
+  left: 50%;
+  width: 275px;
+  height: 6px;
+  transform: translateX(-50%);
+  background: #BEA67C;
+}
