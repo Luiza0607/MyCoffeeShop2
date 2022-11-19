@@ -24,21 +24,10 @@
   font-family: $font-family;
   font-weight: bold;
   color: $color-font-three;
-  font-size: 30px;
+  font-size: 48px;
   letter-spacing: 4px;
   position: relative;
   margin-bottom: 0;
-}
-
-.product h3::after {
-  position: absolute;
-  content: '';
-  bottom: -35px;
-  left: 60px;
-  width: 100px;
-  height: 4px;
-  transform: translateX(-50%);
-  background: $color-font-one;
 }
 
 .products {
@@ -54,15 +43,6 @@
   justify-content: center;
   padding: 20px;
   flex-direction: row;
-}
-
-.product-list .products:nth-child(1n) .row {
-  padding-top: 40px;
-}
-
-.product-list .products:nth-child(2n) .row {
-  flex-direction: row-reverse;
-  margin-inline: -40px;
 }
 
 .product-list {
@@ -86,24 +66,50 @@
   align-content: flex-start;
 }
 
-.number-1 img {
-  position: absolute;
-  width: 5%;
-  transform: translateX(230%) translateY(-120%);
+.box {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.symbol {
+  width: 170px;
+  height: 170px;
+}
+
+.symbol img {
+  width: 186px;
+  height: 168px;
+}
+
+.description-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0px 30px 0px;
+  margin-top: 9.7px;
+  width: 100%;
+}
+
+.line {
+  width: 100px;
+  height: 4px;
+  background: $color-font-one;
 }
 
 .description {
-  padding: 30px 0px 10px 120px;
-  max-width: 450px;
-  font-size: 18px;
-  margin-top: 6px;
+  font-size: 17px;
+  margin: 0;
+  flex: 1;
+  padding-left: 20px;
 }
+
 
 .roasting,
 .intensity {
   font-size: 16px;
   font-weight: 750;
   letter-spacing: 2px;
+  margin: 0;
 }
 
 span {
@@ -120,8 +126,8 @@ span {
 }
 
 .image img {
-  width: 400px;
-  height: 310px;
+  width: 553px;
+  height: 422px;
   box-shadow: 0 0 10px 5px grey;
-  margin-left: 30px;
+  margin-left: 70px;
 }
