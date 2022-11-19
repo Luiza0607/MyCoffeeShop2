@@ -1,38 +1,40 @@
 export const select = {
   templateOf: {
-    homePage: '#template-home-page',
-    menuProduct: '#template-products-page',
-    contactPage: '#template-contact-page',
+    menuProduct: '#template-product',
+    product: '#product',
   },
-
   containerOf: {
-    home: '#home-wrapper',
-    products: '#products-list',
-    contact: '#contact-wrapper',
-    pages: '#home, #products, #contact',
+    menuProducts: '#product-list-products',
+    homeProducts: '#product-list-home',
+    pages: '#pages',
   },
-
   nav: {
-    links: '.header-nav a',
+    links: '.navigation a',
   },
-
-};
-
-export const classNames = {
-  active: 'active',
 };
 
 export const settings = {
   db: {
     url: '//' + window.location.hostname + (window.location.hostname == 'localhost' ? ':3131' : ''),
     products: 'products',
+    name: '.name',
+    description: '.descrtiption',
+    image: '.image',
+    roasting: '.roasting',
+    intensity: '.intensity',
+
   },
 };
 
+export const classNames = {
+  pages: {
+    active: 'active',
+  },
+  nav: {
+    active: 'active',
+  }
+};
 
 export const templates = {
-  homePage: Handlebars.compile(document.querySelector(select.templateOf.homePage).innerHTML),
   menuProduct: Handlebars.compile(document.querySelector(select.templateOf.menuProduct).innerHTML),
-  contactPage: Handlebars.compile(document.querySelector(select.templateOf.contactPage).innerHTML),
-  products: Handlebars.compile(document.querySelector(select.containerOf.products).innerHTML),
 };

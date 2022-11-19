@@ -1,42 +1,50 @@
 .contact {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  font-family: $font-family;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
 
+.title-contact {
+  border-bottom: 5px solid $color-font-one;
+  width: 600px;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 5%;
 
-  .form {
-    text-align: center;
-
-    label {
-      letter-spacing: 3px;
-      margin: 10px 0;
-      font-weight: bold;
-    }
-
-    input {
-      width: 280px;
-      border: 2px solid $color-font-three;
-      margin: 10px 0;
-    }
-
-    .text-area {
-      height: 100px;
-    }
-
-    button {
-      margin: 10px 0;
-      padding: 15px 25px;
-      letter-spacing: 3px;
-      background: $color-font-one;
-      border: none;
-      color: $color-font-two;
-      text-align: center;
-      font-weight: bold;
-
-    }
-
+  h1 {
+    color: $color-font-one;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 50px;
+    letter-spacing: 10px;
+    padding-bottom: 10px;
   }
+}
 
+form p {
+  color: $color-font-three;
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+form input {
+  border: 2px solid #000;
+  font-size: 16px;
+  padding: 12px 15px 12px 10px;
+}
+
+input[name="message"] {
+  height: 80px;
+}
+
+.btn-submit {
+  background-color: $color-font-one;
+  width: 150px;
+  height: 50px;
+  border: none;
+  font-family: $font-family;
+  color: $color-font-two;
+  letter-spacing: 4px;
+  font-weight: 550;
 }

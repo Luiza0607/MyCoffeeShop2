@@ -6,18 +6,11 @@
 
 body {
   margin: 0;
+  font-family: $font-family;
 }
 
 .container {
   margin: 0 auto;
   max-width: 1140px;
   padding: 0 20px;
-}
-
-#pages>section {
-  display: none;
-}
-
-#pages>section.active {
-  display: block;
 }

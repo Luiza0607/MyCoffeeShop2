@@ -1,32 +1,29 @@
 {
   "products": [
     {
-      "name1": "LA LAGARTIJA",
-      "price1": "36",
-      "newPrice": "",
-      "text1": "Mysterious and treachorous... The best choice for the start of your journey! It will procide you a rich delicious flavor.",
-      "picture1": [
-        "coffee-1.png"
-      ],
-      "mostpopular": [
-        "1 most popular.jpg"
-      ],
-      "roasting1": "5/10",
-      "intensity1": "6/10",
-      "name2": "EL TIGRE",
-      "text2": "Really dark coffee, only for the real gourments. It has bitter flavor of grapefruits and is mixed with a little bit of peanuts with caramel.",
-      "picture2": [
-        "coffee-2.png"
-      ],
-      "roasting2": "8/10",
-      "intensity2": "9/10",
-      "name3": "LA CUCARACHA",
-      "text3": "Sweet and intense with a bif amount of different flavors. Caramel, grapes, strwaberry, you name it! It's great choice for warm summer days.",
-      "picture3": [
-        "coffee-3.png"
-      ],
-      "roasting3": "3/10",
-      "intensity3": "7/10"
+      "id": "product-one",
+      "name": "01. LA LAGARTIJA",
+      "description": "Mysterious and treacherous... The best choice for the start of your journey! It will provide you a rich delicious flavor.",
+      "image": "../images/coffee-1.png",
+      "sign": "../images/1 most popular.jpg",
+      "roasting": "5/10",
+      "intensity": "6/10"
+    },
+    {
+      "id": "product-two",
+      "name": "02. EL TIGRE",
+      "description": "Really dark coffee, only for the real gourmets. It has bitter flavor of grapefruits and is mixed with a little bit of peanuts with caramel.",
+      "image": "../images/coffee-2.png",
+      "roasting": "8/10",
+      "intensity": "9/10"
+    },
+    {
+      "id": "product-three",
+      "name": "03. LA CUCARACHA",
+      "description": "Sweet and intense with a big amount of different flavors. Caramel, grapes, strawberry, you name it! It's great choice for warm summer days.",
+      "image": "../images/coffee-3.png",
+      "roasting": "3/10",
+      "intensity": "7/10"
     }
   ]
 }

@@ -1,82 +1,97 @@
-/* eslint-disable no-undef */
-import { settings, select, classNames } from './settings.js';
-import Products from './components/Product.js';
-import Home from './components/Home.js';
-import Contact from './components/Contact.js';
+import { select, settings, classNames } from './settings.js';
+import Product from './components/Products.js';
 
 const app = {
+
   initPages: function () {
     const thisApp = this;
+
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
 
+    const idFromHash = window.location.hash.replace('#/', ''); //#/about -> about
+
+    let pageMatchingHash = thisApp.pages[0].id; //home
+
+    for (let page of thisApp.pages) {
+      if (page.id == idFromHash) {
+        pageMatchingHash = page.id;
+        break;
+      }
+    }
+
+    thisApp.activatePage(pageMatchingHash);
+
     for (let link of thisApp.navLinks) {
       link.addEventListener('click', function (event) {
-        event.preventDefault();
         const clickedElement = this;
+        event.preventDefault();
+
+        /* get page id from href attribute */
         const id = clickedElement.getAttribute('href').replace('#', '');
 
-        thisApp.activePage(id);
+        /* run thisApp.activatePage with that id */
+        thisApp.activatePage(id);
+
+        /* change URL hash */
+
+        window.location.hash = '#/' + id;
 
       });
     }
   },
 
-  activePage: function (id) {
+  activatePage: function (pageId) {
+    const thisApp = this;
 
-    for (const page of document.querySelectorAll(select.containerOf.pages)) {
-      page.classList.remove(classNames.active);
+    for (let page of thisApp.pages) {
+      page.classList.toggle(classNames.pages.active, page.id == pageId);
     }
-    document.querySelector('#' + id).classList.add(classNames.active);
+    /* add class "active" to matching links, remove from non-matching */
 
-    window.location.hash = `#/${id}`;
+    for (let link of thisApp.navLinks) {
+      link.classList.toggle(
+        classNames.nav.active,
+        link.getAttribute('href') == '#' + pageId
+      );
+    }
+
   },
+
+  initMenu: function () {
+    const thisApp = this;
+
+    for (let productData of thisApp.data.products) {
+      new Product(productData.id, productData);
+    }
+  },
+
 
   initData: function () {
     const thisApp = this;
+
     thisApp.data = {};
+
     const url = settings.db.url + '/' + settings.db.products;
+
     fetch(url)
-      .then((rawResponse) => {
+      .then(function (rawResponse) {
         return rawResponse.json();
       })
-      .then((parsedResponse) => {
+      .then(function (parsedResponse) {
+        // save parsedResponse at thisApp.data.products
         thisApp.data.products = parsedResponse;
+        // execute initMenu method
+        app.initMenu();
       });
   },
-
-  initProduct: function () {
-    const thisApp = this;
-    const productsSub = document.querySelector(select.templateOf.menuProduct);
-    thisApp.products = new Products(productsSub);
-  },
-
-  initHome: function () {
-    const thisApp = this;
-    const homeSub = document.querySelector(select.containerOf.home);
-    thisApp.home = new Home(homeSub);
-  },
-
-  initContact: function () {
-    const thisApp = this;
-    const contactSub = document.querySelector(select.containerOf.contact);
-    thisApp.contact = new Contact(contactSub);
-  },
-
-
 
 
   init: function () {
     const thisApp = this;
     thisApp.initData();
-    thisApp.initProduct();
-    thisApp.initContact();
-    thisApp.initHome();
     thisApp.initPages();
-
-
-  }
+  },
 };
-
 
 app.init();
