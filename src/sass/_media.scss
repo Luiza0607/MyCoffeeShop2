@@ -1,7 +1,4 @@
 @media (max-width: 868px) {
-
-	// HOME //
-
 	.title {
 		padding-top: 50px;
 		padding-left: 10px;
@@ -28,6 +25,20 @@
 	.footer {
 		font-size: 10px;
 	}
+
+	.row {
+		flex-direction: column;
+	}
+
+	.product,
+	.image,
+	.image img {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+
 }
 
 @media (min-width: 868px) and (max-width: 991px) {
@@ -54,30 +65,40 @@
 		}
 	}
 
+	.row {
+		flex-direction: column;
+	}
 
+	.product,
+	.image,
+	.image img {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+}
 
-	@media (min-width: 991px) and (max-width: 1151px) {
-		.title {
-			padding-top: 50px;
-			padding-left: 10px;
-			padding-right: 5px;
-			letter-spacing: 8px;
+@media (min-width: 991px) and (max-width: 1151px) {
+	.title {
+		padding-top: 50px;
+		padding-left: 10px;
+		padding-right: 5px;
+		letter-spacing: 8px;
 
-			.sub-title-1 {
-				line-height: 0px;
-				margin: 0 auto;
-				font-size: 30px;
-				text-align: center;
+		.sub-title-1 {
+			line-height: 0px;
+			margin: 0 auto;
+			font-size: 30px;
+			text-align: center;
 
-			}
+		}
 
-			.sub-title-2 {
-				text-align: center;
-				line-height: 30px;
-				font-size: 30px;
-				padding-left: 0px;
+		.sub-title-2 {
+			text-align: center;
+			line-height: 30px;
+			font-size: 30px;
+			padding-left: 0px;
 
-			}
 		}
 	}
 }

@@ -32,7 +32,7 @@
     justify-content: space-around;
 }
 
-.product-list .products {
+.product .products {
     display: flex;
     margin: 0 auto;
     justify-content: center;
@@ -43,13 +43,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex: 0 0 50%;
 }
 
 
 .product {
     margin: 25px 0;
     display: flex;
-    max-width: 500px;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -106,7 +106,6 @@ span {
 }
 
 .image {
-    max-width: 400px;
     margin: 0;
     padding: 0;
     padding-top: 30px;
@@ -116,4 +115,6 @@ span {
 .image img {
     box-shadow: 0 0 10px 5px grey;
     margin-left: 70px;
+    width: 100%;
+    height: 100%;
 }
